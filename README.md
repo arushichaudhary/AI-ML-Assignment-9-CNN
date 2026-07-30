@@ -5,18 +5,6 @@ Build a Convolutional Neural Network (CNN) that classifies pet images into two c
 
 ## Dataset
 - Kaggle: [Dog and Cat Classification Dataset](https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset)
-- This is the same underlying Cats vs Dogs image collection used across most Kaggle mirrors (including `salader/dogs-vs-cats`), originally sourced from the Kaggle "Dogs vs. Cats" competition.
-- The dataset is **not included in this repository** — download it directly from the Kaggle link above (or via the Kaggle API) and place it locally before running the notebook.
-- Folder structure expected:
-  ```
-  data/
-    train/
-      cats/
-      dogs/
-    test/
-      cats/
-      dogs/
-  ```
 
 ## Libraries Used
 - TensorFlow / Keras (model building, training, `ImageDataGenerator`)
@@ -68,4 +56,4 @@ Training accuracy rose from ~59% to ~98% over 10 epochs while validation accurac
 ## Conclusion
 This project built a CNN to classify cat and dog images, reaching 77% test accuracy after 10 epochs, though training accuracy (98%) outpaced validation accuracy, showing overfitting on the training set used. Convolutional layers are essential because they automatically learn spatial features, such as edges, textures and shapes, directly from raw pixels, removing the need for manual feature engineering. Pooling layers then downsample these feature maps, reducing the parameter count and making the model more tolerant of small shifts or distortions. Compared to a plain ANN, a CNN's key advantage is that it preserves an image's 2D spatial structure through shared convolutional filters, rather than flattening pixels into one long vector and losing that structure. A limitation of CNNs is that they need large amounts of labeled data to generalize well; with limited data, as seen here, they can overfit quickly and lose accuracy on unseen images.
 
-*(147 words)*
+
